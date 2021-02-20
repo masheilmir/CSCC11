@@ -1,0 +1,72 @@
+CSCC11 - Introduction to Machine Learning, Winter 2021, Assignment 1
+B. Chan, S. Wei, D. Fleet
+===========================================================
+
+For the following questions, please answer concisely in bullet points.
+
+Q1: Dataset Size
+- In general, if I increase the size of the training set, what can we expect about the model's
+  training error? What about the test error?
+
+      When we increase the size of the training set, we can say the following:
+      The training error generally increases since fitting all the data will become harder
+      The test error should generally decrease since we are feeding in more data to make the
+      result more accurate
+
+- In general, if I increase the size of the test set, what can we expect the about the model's
+  training error? What about the test error?
+
+      When we increase the size of the test set, we can say the following:  
+      The training error will generally stay the same assuming that the size of the training data
+      has not changed
+      The test error may stay the same if the model is a good fit, but assuming there is more test
+      data than training data, the test error may increase due to the fact that some of the data
+      cannot be fit accurately
+
+- How much data should I try to obtain if I want to build a good model?
+
+      Generally, the more data you have, the better your model will be. But the best way to ensure
+      your model is a good one is by having a good balance between your training data and test data
+      to ensure a well generated model
+
+Q2: Model Complexity
+- In general, if the model is too simple, what can we conclude about the training and test errors?
+
+    If the model is too simple we can conclude that the training and test errors will be higher.
+
+- In general, if the model is too complex, what can we conclude about the training and test errors?
+
+    If the model is too complex, we can conclude that training error will be low because of overfitting
+    but test error will be high; this can be solved through regularization
+
+- For each dataset, which (degree) model gives the best performance? How did you find out?
+    
+    For dataset 1, degree 3 gives the best performance. 
+    For dataset 2, degree 6 or 7 gives the best performance.
+    For dataset 3, degree 4 gives the best performance.
+
+    I found these values by analyzing the small and large training sets for each data set, then
+    looking at where the test error begins to increase, which is where we can say that the data is 
+    beginning to overfit or is overfitting as a faster rate. In other words, I identified where the
+    test error was at its minimum, with both test and training errors being low.
+
+- For each dataset, what degree of polynomial do you think was used to generate the data?
+    
+    Dataset 1: degree 2
+    Dataset 2: degree 6 (since this is where the data begins to first increase slightly)
+    Dataset 3: degree 4
+
+Q3: Regularization
+- In general, what does regularization do to the weights? Note: You may want to look at the weight values.
+
+    In general, regularization decreases the weight values to make the model smoother.
+
+- In general, if we set lambda (l2_coef) to 0, what do we get?
+
+    If we set the lambda term to 0, we ontain the ordinary least square objective term.
+
+- In general, what does increasing lambda (l2_coef) do to our loss function?
+
+    The more we increase the lambda value, the smoother our function will get and the more the weights will 
+    decrease. Increasing the lambda term aids in preventing overfitting of the data.
+
