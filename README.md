@@ -1,4 +1,4 @@
-# CSCC11
+# CSCC11 - Introduction to Machine Learning
 
 This is my work for the CSCC11 Winter 2021 course at the University of Toronto, Scarborough.
 
